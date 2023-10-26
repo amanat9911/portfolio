@@ -1,0 +1,257 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+body{
+    background-color: rgb(246, 220, 250);
+    overflow-x: hidden;
+}
+header{
+    padding: 15px 8%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    transition: .3s;
+    background-attachment: fixed;
+}
+span{
+    background: linear-gradient(#ff6bd0, #b726d4);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+header .logo{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+ul.navlist{
+    display: flex;
+}
+.navlist li {
+    margin: 0 1rem;
+}
+.navlist li a{
+    display: inline-flex;
+    font-weight: 600;
+}
+.navlist li a:hover,.navlist li a.active{
+    background-color: #b726d4;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.righ-header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.8rem;
+}
+.btn{
+    color: black;
+    background: #ff6bd0;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3 ease;
+}
+.menu-icon{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    width: 30px;
+    
+}
+.menu-icon .bar,
+.menu-icon::after,
+.menu-icon::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background: black;
+    margin: 6px 0;
+    transition: .4s;
+}
+
+section{
+    padding: 90px 8%;
+
+}
+.home{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-gap: 4rem;
+}
+.hero-info{
+    margin-top: 4rem;
+}
+.hero-info h3{
+    margin-left: 5px;
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1rem;
+    
+}
+.text-animate{
+    width: 22.5rem;
+    position: relative;
+
+}
+
+.text-animate h2{
+    color: #be1485;
+    overflow: hidden;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    -webkit-text-stroke: 0.1vw #be1485;
+    background: rgb(252, 39, 163)
+    transition: 0.6s;
+    animation: moveText 3s linear infinite;
+    animation-delay: 2s;
+}
+
+.hero-info h1{
+    font-size: 3.5rem;
+}
+.hero-info p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.hero-image{
+    
+    width: 400px;
+}
+#dev{
+    margin-left: 40px;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 520;   
+    align-items: center;
+}
+
+@keyframes moveText{
+    0%,10%,100%{
+        width: 0%;
+    
+    }
+    60%,70%{
+        width: 100%;
+    
+    }
+}
+#p1{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#btn-box{  
+    /* margin-top: 1px;  */
+    margin-left: 1px;
+    /* margin-right: 1px; */
+    color: black;
+    background: #ff6bd0;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3 ease;
+    margin-top: 20px;
+}
+.social-media{
+    overflow: hidden;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+ .bg-icon{
+    color: #b726d4;
+    font-size: 35px;
+    padding-right: 10px;
+ }
+ .hero-image img{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    border-radius: 50%;  
+}
+#btn-box:hover{
+    box-shadow: 5px 5px 5px rgb(85, 76, 76);
+}
+
+
+/* //about-section// */
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.about .about-img{
+    position: relative;
+}
+.about .about-img .aboutHero{
+    width: 30vw;
+    height: auto;
+
+}
+.heading{
+    font-size: 1.5rem;
+    color:hsl(319, 100%, 54%);
+}
+.about-content {
+    padding: 2rem;
+
+}
+.about-content #new{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    
+}
+.about-btn{
+    margin: .8rem 0;
+    
+}
+.about-btn button{
+    font-size: 15px;
+    padding: 10px 20px;
+    /* border: 5px solid rgb(255, 255, 255); */
+    border-radius: 5px;
+    background:white
+}
+.about-btn button:hover{
+    box-shadow: 2px 2px 2px rgb(85, 76, 76);
+
+}
+.content-btn .textbox{
+    font-size: 20px;
+}
+.about-btn button.activeM{
+    background: #f739b8;
+}
+.textbox{
+    font-size: 30px;
+    margin: .8rem 0;
+}
+
+
+/* content button design */
+
+.content-btn > .content:not(:first-child){
+    display: none;
+}
